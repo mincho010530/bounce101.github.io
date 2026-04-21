@@ -238,8 +238,9 @@ button:disabled,
   flex: 0 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   overflow: visible;
+  padding-top: 4px;
   padding-bottom: 14px;
 }
 
@@ -281,10 +282,10 @@ button:disabled,
   min-height: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   overflow: visible;
   position: relative;
-  padding: clamp(8px, 1.2vh, 16px) 0;
+  padding: 0 0 14px;
 }
 
 .room-scene-scale {
@@ -297,8 +298,9 @@ button:disabled,
 
 .miniroom-bubbles {
   position: absolute;
-  right: 14px;
-  top: 20px;
+  left: 50%;
+  top: 12px;
+  transform: translateX(280px);
   width: min(280px, 28vw);
   display: grid;
   gap: 10px;
