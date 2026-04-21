@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>강민서 | Pixel Room</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pretendard:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section id="intro" class="intro-screen active">
+      <canvas id="watercolor-canvas"></canvas>
+      <div class="intro-overlay">
+        <p id="press-text" class="press-text">Press the letter key</p>
+        <p id="counter" class="counter">5회 남았습니다</p>
+      </div>
+    </section>
+
+    <section id="site" class="site-shell">
+      <div class="app-shell">
+        <header class="top-header">
+          <div class="top-brand">
+            <img class="top-brand-logo" src="./branding/logo-bounce-transparent.png" alt="BOUNCE 로고" />
+          </div>
+          <nav class="menu top-menu" aria-label="Top navigation">
+            <button class="menu-btn active" data-panel="home">Home</button>
+            <button class="menu-btn" data-panel="about">About</button>
+            <button class="menu-btn" data-panel="contents">Contents</button>
+            <button class="menu-btn" data-panel="contact">Contact</button>
+          </nav>
+        </header>
+
+        <aside class="side-nav" aria-label="Site navigation">
+          <div class="side-nav-top">
+            <p class="side-nav-subtitle">Build Resilience</p>
+          </div>
+          <nav class="menu side-menu">
+            <button class="menu-btn active" data-panel="home">Home</button>
+            <button class="menu-btn" data-panel="about">About</button>
+            <button class="menu-btn" data-panel="contents">Contents</button>
+            <button class="menu-btn" data-panel="contact">Contact</button>
+          </nav>
+          <div class="side-nav-bottom">
+            <p>Follow my story</p>
+            <p>@support_minseo</p>
+          </div>
+        </aside>
+
+        <main class="main-content">
+          <section id="home" class="panel active home-panel">
+          <div class="home-intro-section">
+            <div class="intro-copy">
+              <strong class="intro-copy-head">회복탄력성 크리에이터 강민서입니다</strong>
+              <br /><br />
+              💡 회복탄력성? 넘어져도 다시 일어설 수 있는 힘
+              <br />
+              ❓ 회복탄력성은 가족에게서 처음 배운다. 가족의 울타리가 약해지는 핵개인화 시대 속에서 다시 일어설 수 있는 힘은 이제 어떻게 얻어야 할까?
+              <br /><br />
+              이제 회복탄력성을 만드는 건 엔터테인먼트의 업이라고 생각합니다. 저는 엔터테인먼트와 소비자행동의 전문가로, 콘텐츠가 개인의 정서적 회복 자원으로 기능하는 현상에 주목하며, 이러한 현상이 어떻게 소비행동으로 이어지는지 설명하는 연구자가 되고자 합니다.
+              <br /><br />
+              저와 함께 넘어져도 다시 일어나는 힘을 배워보시겠어요?
+              <br />
+              <button id="yes-button" class="yes-button">YES</button>
+            </div>
+          </div>
+          <div class="home-room-section">
+            <div class="room-editor-container">
+              <div class="room-scene-scale">
+                <div id="room-scene" class="room-wrapper">
+                  <img
+                    class="room-background-image"
+                    src="file:///C:/Users/%EA%B0%95%EB%AF%BC%EC%84%9C/.cursor/projects/c-Users-Desktop-AI-my-cite/assets/c__Users_____AppData_Roaming_Cursor_User_workspaceStorage_8df7a00207fd9ac6de30f5a5ab240794_images_image-47f31bcd-c16e-46ca-b0ed-441503724f39.png"
+                    alt="빈 미니룸 배경"
+                  />
+                  <div id="overlay-layer" class="overlay-layer"></div>
+                  <div id="pet-layer" class="pet-layer">
+                    <div id="dog-wrapper" class="dog-wrapper">
+                      <img id="dog-runner" class="dog-runner" src="./dog_states/sit.png" alt="앉았다 일어나는 강아지" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="balloon-layer" class="balloon-layer"></div>
+              <div class="miniroom-bubbles" aria-live="polite">
+                <p class="miniroom-bubble">드래그하면 옮길 수 있어요!</p>
+                <p class="miniroom-bubble">강아지는 클릭하면 멈추고, 다시 클릭하면 앉았다 일어나요.</p>
+              </div>
+            </div>
+          </div>
+          </section>
+
+          <section id="about" class="panel content-panel">
+          <h2>About Me</h2>
+          <div class="about-layout">
+            <div class="about-profile">
+              <img src="file:///C:/Users/%EA%B0%95%EB%AF%BC%EC%84%9C/.cursor/projects/c-Users-Desktop-AI-my-cite/assets/c__Users_____AppData_Roaming_Cursor_User_workspaceStorage_8df7a00207fd9ac6de30f5a5ab240794_images____-38ebbff3-ff04-430d-9928-5ea46dbdf795.png" alt="강민서 프로필 사진" />
+            </div>
+            <div class="about-grid">
+            <article class="about-card"><h3>Education</h3><ul class="edu-list"><li>서울 계성고등학교 졸업</li><li>한성대학교 재학</li></ul><div class="edu-sub-lines"><p>문학문화콘텐츠트랙 전공</p><p>기업경영트랙 전공</p><p>총 학점 4.47 / 4.5</p></div></article>
+            <article class="about-card"><h3>Honors</h3><ul><li>2025-2 서울교환학생 장학금 | 서울장학재단</li><li>2022-2 한성 최우수 장학금 (과 수석) | 한성대학교</li><li>2021-1 한성 최우수 장학금 (과 수석) | 한성대학교</li><li>2020-2 한성 최우수 장학금 (과 수석) | 한성대학교</li></ul></article>
+            <article class="about-card"><h3>Awards</h3><ul class="awards-list"><li>2022.11 | 금상</li><li>제 3회 전국 대학생 미디어 콘텐츠 공모전</li></ul></article>
+            <article class="about-card"><h3>Language</h3><ul><li>TOEFL 84</li><li>TEPS 329</li><li>TOEIC 830</li><li>2025 미국 일리노이 시카고 교환학생 경험</li></ul></article>
+            <article class="about-card"><h3>Skill</h3><div class="skill-rows"><div class="skill-row"><img src="file:///C:/Users/%EA%B0%95%EB%AF%BC%EC%84%9C/.cursor/projects/c-Users-Desktop-AI-my-cite/assets/c__Users_____AppData_Roaming_Cursor_User_workspaceStorage_8df7a00207fd9ac6de30f5a5ab240794_images_image-63d211eb-3de6-4fdf-8509-5c6394268bf5.png" alt="Premiere logo" /><span>Premiere</span><div class="skill-bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div><div class="skill-row"><img src="file:///C:/Users/%EA%B0%95%EB%AF%BC%EC%84%9C/.cursor/projects/c-Users-Desktop-AI-my-cite/assets/c__Users_____AppData_Roaming_Cursor_User_workspaceStorage_8df7a00207fd9ac6de30f5a5ab240794_images_image-55e0b7c4-b40c-4657-b49c-2b67d0aae352.png" alt="PowerPoint logo" /><span>PowerPoint</span><div class="skill-bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div><div class="skill-row"><img src="file:///C:/Users/%EA%B0%95%EB%AF%BC%EC%84%9C/.cursor/projects/c-Users-Desktop-AI-my-cite/assets/c__Users_____AppData_Roaming_Cursor_User_workspaceStorage_8df7a00207fd9ac6de30f5a5ab240794_images_image-2a5ef7c7-4f78-4db2-9106-746d162ef96a.png" alt="After Effects logo" /><span>After Effects</span><div class="skill-bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div><div class="skill-row"><img src="file:///C:/Users/%EA%B0%95%EB%AF%BC%EC%84%9C/.cursor/projects/c-Users-Desktop-AI-my-cite/assets/c__Users_____AppData_Roaming_Cursor_User_workspaceStorage_8df7a00207fd9ac6de30f5a5ab240794_images_image-27a6148b-0e2e-4277-a286-3c4f87e3f71a.png" alt="Photoshop logo" /><span>Photoshop</span><div class="skill-bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div></div></article>
+            <article class="about-card"><h3>Part-time Job</h3><ul><li>학원 보조 강사 (2021.01-2021.06)</li></ul><button id="toggle-kpop" class="toggle-button">▼ K-pop 공연 진행요원 업무 경험 (click!)</button><ul id="kpop-list" class="kpop-list hidden"></ul></article>
+          </div>
+          </div>
+          </section>
+
+          <section id="contents" class="panel content-panel">
+          <div class="contents-heading">
+            <h2>Contents</h2>
+            <p class="contents-note">프로젝트의 일부분을 확인하실 수 있습니다</p>
+          </div>
+          <div class="contents-list">
+            <article class="contents-item">
+              <button class="contents-cover" data-detail-id="detail-1">
+                <span class="cover-label">제 3회 전국 대학생 미디어 콘텐츠 공모전 금상</span>
+              </button>
+              <div id="detail-1" class="contents-detail hidden">
+                <p>• 도시 서울을 소개하는 영상을 제작해 금상 수상</p>
+                <p>• [서울의 대표색 10가지를 찾아 떠나는 라디오 서울 여행!] 이라는 주제로 제작</p>
+                <p>○ 대학에서도, 아이돌 팬덤에서도 그 집단을 대표하는 상징색은 꽤 강렬한 인상을 남기기 마련인데, 서울시에서도 공식적으로 선정된 서울의 대표색 10가지가 있고, 그 색을 품고 있는 장소들을 찾아 사연을 기반으로 소개하고자 함.</p>
+                <p>○ 서울의 대표적 장소들을 하나의 이동형 서사로 엮어, 도시를 감각적으로 경험할 수 있는 영상콘텐츠를 기획·제작하였습니다. 이 프로젝트를 통해 도시공간을 콘텐츠로 번역하는 기획력, 대중친화적 스토리텔링 구성, 영상편집 및 연출역량을 발전시킬 수 있었습니다.</p>
+              </div>
+            </article>
+
+            <article class="contents-item">
+              <button class="contents-cover" data-detail-id="detail-2">
+                <span class="cover-label">한식진흥원 우수 서포터즈</span>
+              </button>
+              <div id="detail-2" class="contents-detail hidden">
+                <p>• 한식 문화공간 ‘이음’ 뉴스레터 기획안 및 뉴스레터 제작</p>
+                <p>• 한식 문화공간 ‘이음’ 홍보 영상 제작</p>
+                <p>• 팀장 역할 수행: 프로젝트 총괄 및 팀원 간 소통 창구 역할 수행</p>
+                <p>○ ‘오늘 뭐 먹지’라는 일상적인 질문에서 출발해, 한식을 어렵게 느끼는 청년 세대의 식생활 고민에 주목했습니다.</p>
+                <p>○ 1인 가구 및 청년세대의 식생활·라이프스타일 데이터를 바탕으로 타깃세분화 및 페르소나를 설정했습니다.</p>
+                <p>○ 한식문화공간 ‘이음’의 콘텐츠 소비흐름을 분석하고, 뉴스레터 및 영상 중심의 콘텐츠 전략을 기획했습니다.</p>
+              </div>
+            </article>
+
+            <article class="contents-item">
+              <button class="contents-cover" data-detail-id="detail-3">
+                <span class="cover-label">이머시브 연극 &lt;심판&gt; 투자제안서 기획</span>
+              </button>
+              <div id="detail-3" class="contents-detail hidden">
+                <p>• 관객이 배심원으로 참여해 판결을 결정하는 이머시브 공연을 투자제안서 형태로 기획</p>
+                <p>• 작품 분석을 바탕으로 타깃층·마케팅 전략·예상 수익 구조까지 연결해 설계</p>
+                <p>○ 공연 기획 경험을 넘어, 참여형 서사가 관객의 몰입과 재관람 가능성을 어떻게 형성하는지 고민했던 작업이었습니다.</p>
+                <p>○ 엔터테인먼트 소비자 행동 연구 관심으로 이어졌던 시간이었습니다.</p>
+              </div>
+            </article>
+
+            <article class="contents-item">
+              <button class="contents-cover" data-detail-id="detail-4">
+                <span class="cover-label">팝업스토어 트렌드 분석 보고서 작성</span>
+              </button>
+              <div id="detail-4" class="contents-detail hidden">
+                <p>• 더현대 서울과 성수동 팝업스토어를 비교 관찰하며 공간, 소비자, 콘텐츠 트렌드 분석</p>
+                <p>• 팝업스토어를 브랜드 경험과 참여형 콘텐츠가 결합된 오프라인 플랫폼으로 해석</p>
+                <p>• 관찰 결과를 바탕으로 맞춤형 추천서비스, 디지털 스탬프, NFC 기반 보상시스템 기획</p>
+                <p>○ 본 프로젝트는 팝업스토어를 브랜드 홍보수단이 아니라, 공간·콘텐츠·소비자 행동이 결합된 경험적 미디어환경으로 바라본 관찰 연구 경험이었습니다.</p>
+                <p>○ 현장 비교 관찰을 통해 소비자와 공간의 분위기 일치, 스탬프 미션을 통한 참여 유도, 럭키드로우를 활용한 보상구조를 주요 트렌드로 정리하였고, 이를 바탕으로 이용자 경험 설계와 서비스 확장 가능성을 탐색하였습니다.</p>
+              </div>
+            </article>
+
+            <article class="contents-item">
+              <button class="contents-cover" data-detail-id="detail-5">
+                <span class="cover-label">쿠팡 광고제안서 기획</span>
+              </button>
+              <div id="detail-5" class="contents-detail hidden">
+                <p>• 쿠팡플레이 인지도 제고를 위한 콘서트 기반 광고·콘텐츠 전략 기획</p>
+                <p>• 생중계, 하이라이트, VOD를 결합한 와우회원 전용 콘텐츠 구조 제안</p>
+                <p>• 엔터테인먼트 경험을 활용한 플랫폼 리브랜딩 및 멤버십 확장 전략 설계</p>
+                <p>○ 이 프로젝트는 엔터테인먼트 콘텐츠를 활용해 플랫폼 인지도와 멤버십 가치를 강화할 수 있는 가능성을 검토한 사례였습니다.</p>
+                <p>○ 스포츠 중계 사례를 참조하여 콘서트 콘텐츠의 생중계, 하이라이트, VOD 구조를 설계하고, 이를 통해 사용자 참여 유도, 플랫폼 체류 경험, 브랜드 이미지 재구성이 어떻게 이루어질 수 있는지 제안하였습니다.</p>
+              </div>
+            </article>
+
+            <article class="contents-item">
+              <button class="contents-cover" data-detail-id="detail-9">
+                <span class="cover-label">미드 &lt;위기의 주부들&gt;과 한드 &lt;아내의 유혹&gt; 비교평론 프로젝트</span>
+              </button>
+              <div id="detail-9" class="contents-detail hidden">
+                <p>• 장르 비교를 통한 막장드라마 서사 구조 및 특성 분석</p>
+                <p>• 문화적 배경 차이에 따른 여성서사 및 감정 구조 비교</p>
+                <p>• 흥행 요인 분석 및 막장드라마의 지속 가능성·발전 방향 제시</p>
+                <p>○ 두 작품을 중심으로 여성 중심 서사, 가족 해체, 범죄 및 갈등 요소를 분석하여 ‘막장드라마’의 핵심 구성요소와 감정 유도 방식을 구조적으로 정의했습니다.</p>
+                <p>○ 이후 전개 방식과 감정 설계 차이를 비교하며, 미국 드라마는 개인의 선택과 현실적 문제 해결 중심, 한국 드라마는 극단적 갈등과 복수 서사를 통한 감정 몰입 중심이라는 차이를 도출했습니다.</p>
+                <p>○ 시청률, 사회적 환경, 타겟 시청층 분석을 통해 각 작품의 흥행 배경을 정리하고, 자극적 서사와 공감 요소 간 균형이 콘텐츠 성과에 미치는 영향을 분석했습니다.</p>
+                <p>○ 나아가 반복적 자극 구조에 따른 피로도 증가와 시청 환경 변화에 주목하여, 막장드라마가 생존하기 위해서는 현실성·다양성·서사 정교화를 결합한 형태로 진화해야 함을 제시했습니다.</p>
+              </div>
+            </article>
+
+            <article class="contents-item">
+              <button class="contents-cover" data-detail-id="detail-10">
+                <span class="cover-label">DAUM 포털 리포지셔닝 및 신규 사업 전략 기획 보고서 작성</span>
+              </button>
+              <div id="detail-10" class="contents-detail hidden">
+                <p>• 포털 산업 구조 및 경쟁환경 분석을 통한 문제 정의</p>
+                <p>• AI·콘텐츠 트렌드 기반 플랫폼 전환 방향 도출</p>
+                <p>• ‘DAUM World’ 신규 사업 전략 및 시장 진입 전략 제안</p>
+                <p>○ 국내 포털 시장 점유율과 검색 트렌드 변화를 분석하여, 기존 포털 중심 구조에서 AI·영상 기반 검색으로 패러다임이 전환되고 있음을 도출했습니다.</p>
+                <p>○ 5 Forces 및 PEST 분석을 통해 네이버 중심의 높은 경쟁 강도, 생성형 AI와 소셜 미디어의 대체 위협 증가, 사용자 충성도 약화 등 산업 구조적 한계를 규명했습니다.</p>
+                <p>○ 내부환경 분석에서는 커뮤니티 및 콘텐츠 자산이라는 강점을 확인하는 동시에, 검색 기술 경쟁력 약화와 브랜드 노후화 문제를 핵심 이슈로 도출했습니다.</p>
+                <p>○ 이를 바탕으로 포털에서 플랫폼으로의 전환 필요성을 제시하며, AI 기반 커뮤니티 중심 서비스인 ‘DAUM World’ 전략을 기획했습니다.</p>
+                <p>○ 시장 진입 시기 분석을 통해 기술 성숙도와 트렌드 적합성을 검증하고, 초기 선점 전략을 통한 플랫폼 경쟁력 확보 방향을 도출했습니다.</p>
+              </div>
+            </article>
+
+            <article class="contents-item">
+              <button class="contents-cover" data-detail-id="detail-6">
+                <span class="cover-label">‘파라바라’ 현황과 개선방안 보고서 작성</span>
+              </button>
+              <div id="detail-6" class="contents-detail hidden">
+                <p>• 소비자 행동 기반 서비스 문제 정의 및 UX 개선 방향 도출</p>
+                <p>• 브랜드 인지도 및 연상구조 분석을 통한 리포지셔닝 전략 제안</p>
+                <p>• STP 전략 재설계를 통한 ‘명품중고거래’ 특화 플랫폼 방향성 제시</p>
+                <p>○ 소비자 의사결정 과정을 기반으로 플랫폼 이용 흐름을 구조적으로 분석하고, 고려 상표군 미포함 및 UX 한계를 핵심 문제로 도출했습니다.</p>
+                <p>○ 경쟁 플랫폼 비교와 브랜드 인지도·연상구조 분석을 통해 서비스의 차별화 필요성을 검증하고, ‘명품중고거래’ 중심의 리포지셔닝 전략을 제안했습니다.</p>
+                <p>○ 최종적으로 STP 프레임워크를 적용해 타겟 세분화와 포지셔닝을 재설계하며, 이론 기반 분석에서 전략 도출까지 이어지는 연구형 문제해결 역량을 강화했습니다.</p>
+              </div>
+            </article>
+
+            <article class="contents-item">
+              <button class="contents-cover" data-detail-id="detail-7">
+                <span class="cover-label">꽁꽁 얼어붙은 과제 뽐내기 공모전 개최</span>
+              </button>
+              <div id="detail-7" class="contents-detail hidden">
+                <div class="contents-detail-split">
+                  <figure class="contents-detail-figure">
+                    <img
+                      src="file:///C:/Users/%EA%B0%95%EB%AF%BC%EC%84%9C/.cursor/projects/c-Users-Desktop-AI-my-cite/assets/c__Users_____AppData_Roaming_Cursor_User_workspaceStorage_8df7a00207fd9ac6de30f5a5ab240794_images_image-d8aff1c0-3a13-46cf-9344-785593ff12b9.png"
+                      alt="꽁꽁 얼어붙은 과제 뽐내기 공모전 포스터"
+                    />
+                  </figure>
+                  <div class="contents-detail-text">
+                    <p>• 과제로만 내기 아까웠던 결과물을 공모전을 통해 다시 의미 있게 만들자는 취지로 직접 개최</p>
+                    <p>• 대학생에 의한, 대학생을 위한, 대학생의 공모전 운영</p>
+                    <p>• 홍보팀 차장으로서 홍보부 내 회의 진행을 서포트</p>
+                    <p>• 업체서치팀으로서 서울 소재 대학에 공모전 홍보를 위한 업체를 서치하고 컨택하여 홍보를 진행</p>
+                    <p>• 심사 참여</p>
+                    <p>• 후원사 컨택</p>
+                    <p>○ 홍보 전략 수립, 외부 업체 및 후원사 컨택, 심사 운영 등 프로젝트 전 과정을 수행하며 이해관계자 조율, 기획, 커뮤니케이션의 중요성을 실무적으로 경험했습니다.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="contents-item">
+              <button class="contents-cover" data-detail-id="detail-8">
+                <span class="cover-label">미국 시카고 교환학생 경험</span>
+              </button>
+              <div id="detail-8" class="contents-detail hidden">
+                <p>• 2025 가을학기 미국 시카고 Northeastern Illinois University 교환학생 파견</p>
+                <p>• 글로벌 특파원 선정: 서울장학재단 장학생으로서 미국 시카고 현지 소식 및 교환학생 팁 게시 글 주기적으로 작성 + 카드뉴스 제작</p>
+                <p>• 학업 성취: 파견 기간 내 전과목 A 달성</p>
+                <p>○ 다양한 문화권에서 축적한 경험은 이후 미디어 이용자와 콘텐츠 소비 맥락을 넓은 시야로 이해하는 기반이 되었습니다.</p>
+              </div>
+            </article>
+
+            <article class="contents-item">
+              <button class="contents-cover" data-detail-id="detail-11">
+                <span class="cover-label">조직 창의성 발현 요인 분석 및 조직문화 개선 방안 프로젝트</span>
+              </button>
+              <div id="detail-11" class="contents-detail hidden">
+                <p>• 조직 창의성 발현 요인 도출 및 중요도 분석</p>
+                <p>• 사례 기반 조직문화 요소의 효과 및 한계 검증</p>
+                <p>• 창의성 극대화를 위한 조직 운영 방향 및 개선 전략 제시</p>
+                <p>○ 조직 창의성에 영향을 미치는 10가지 요인을 도출하고, 열정·자율성·다양성·리더십 등 핵심 요소를 중심으로 우선순위를 구조적으로 정리했습니다.</p>
+                <p>○ 각 요인별 사례 분석을 통해 자율적 환경과 다양성 확보가 혁신성과에 긍정적 영향을 미치며, 특히 다양한 배경의 구성원이 협력할 때 창의적 결과가 강화된다는 점을 검증했습니다.</p>
+                <p>○ ‘NO를 말할 수 있는 조직’과 ‘YES로 수용하는 리더십’의 균형을 기반으로, 창의성과 실행력을 동시에 확보할 수 있는 조직문화 방향성을 제안했습니다.</p>
+              </div>
+            </article>
+
+            <article class="contents-item">
+              <button class="contents-cover" data-detail-id="detail-12">
+                <span class="cover-label">스토리 기반 방탈출 콘텐츠 기획 및 운영 전략 기획안 작성</span>
+              </button>
+              <div id="detail-12" class="contents-detail hidden">
+                <p>• 몰입형 스토리텔링 기반 방탈출 콘텐츠 기획</p>
+                <p>• 사용자 경험 중심 게임 구조 및 문제 설계</p>
+                <p>• 타겟 고객 분석을 통한 차별화된 운영 전략 제안</p>
+                <p>○ 방탈출 콘텐츠의 핵심 요소를 스토리, 공간 연출, 문제 난이도, 참여 경험으로 구조화하고, 사용자 몰입도를 높이는 기획 방향을 도출했습니다.</p>
+                <p>○ 이용자의 플레이 흐름을 분석하여 도입–탐색–문제 해결–탈출로 이어지는 단계별 UX를 설계하고, 긴장감과 성취감을 동시에 유도하는 게임 구조를 기획했습니다.</p>
+                <p>○ 스토리 몰입형 테마와 공간 연출 요소를 결합하여 차별화된 경험 제공 방안을 제시했습니다.</p>
+              </div>
+            </article>
+          </div>
+          </section>
+
+          <div id="contents-modal" class="contents-modal hidden" role="dialog" aria-modal="true" aria-labelledby="contents-modal-title">
+            <div class="contents-modal-card">
+              <div class="contents-modal-header">
+                <h3 id="contents-modal-title"></h3>
+                <button id="contents-modal-close" class="contents-modal-close" type="button" aria-label="닫기">✕</button>
+              </div>
+              <div id="contents-modal-body" class="contents-modal-body"></div>
+            </div>
+          </div>
+
+          <section id="contact" class="panel content-panel contact-panel">
+          <h2>Contact</h2>
+          <div class="hero-section">
+            <p class="contact-lead">저의 브랜드가 마음에 드셨다면, 아래 버튼을 눌러 저를 채용해주세요!</p>
+            <button id="hire-button" class="hire-button">넘어져도 일어나</button>
+          </div>
+
+          <div id="hire-modal" class="hire-modal hidden" role="dialog" aria-modal="true" aria-labelledby="hire-modal-title">
+            <div class="hire-modal-card">
+              <h3 id="hire-modal-title">강민서를 채용해 귀하의 회사에 ‘회복탄력성’의 이미지를 부여하시겠습니까?</h3>
+              <div class="hire-modal-actions">
+                <button id="hire-continue" class="modal-btn continue">계속</button>
+                <button id="hire-cancel" class="modal-btn cancel">취소</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="contact-info" class="contact-info hidden">
+            <p>📩 Mail: kms010530@naver.com</p>
+            <p>📞 Tel: 010-2855-4811</p>
+            <p>📱 Instagram: @support_minseo</p>
+          </div>
+          </section>
+        </main>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
