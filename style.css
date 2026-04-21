@@ -4,7 +4,7 @@
   --cursor-default: url("./cursors/cursor-default.png") 4 4, auto;
   --cursor-pointer: url("./cursors/cursor-pointer.png") 20 6, auto;
   --sidebar-width: 238px;
-  --header-height: 68px;
+  --header-height: 120px;
   --sky-bg: #f7fbff;
   --sky-surface: #f0f7ff;
   --sky-surface-2: #e7f1fb;
@@ -109,7 +109,7 @@ button:disabled,
 
 .top-brand-logo {
   display: block;
-  height: 36px;
+  height: 108px;
   width: auto;
   object-fit: contain;
 }
